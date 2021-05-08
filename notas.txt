@@ -32,4 +32,14 @@
         https://www.youtube.com/watch?v=PSpB-4jn_D0&list=PLdJYl6XU45uLIHaPBQEj-cEMynAl0oeiz&index=9
      
      
+    create database springmvcdemo;
+
+	bookCREATE TABLE book(
+  		id smallint unsigned,
+  		book_name varchar(45),
+  		author varchar(45),
+  		purchase_date date);
+  		
+	INSERT INTO book (id, book_name, author, purchase_date)
+		VALUES (1, "Java", "Cafe", "2021-05-08");
    
