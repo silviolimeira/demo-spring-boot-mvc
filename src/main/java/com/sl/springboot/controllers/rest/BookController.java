@@ -34,7 +34,7 @@ public class BookController {
 	}
 	
 	@GetMapping("/delete")
-	public void deleteBook(@RequestParam long id) {
+	public void deleteBook(@RequestParam Integer id) {
 		bookService.delete(id);
 	}
 	

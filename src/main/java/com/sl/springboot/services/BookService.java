@@ -28,11 +28,11 @@ public class BookService {
 		return books;
 	}
 	
-	public void delete(long id) {
+	public void delete(Integer id) {
 		repository.deleteById(id);
 	}
 	
-	public Optional<Book> findOne(long id) {
+	public Optional<Book> findOne(Integer id) {
 		return repository.findById(id);
 	}
 	

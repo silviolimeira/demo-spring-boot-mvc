@@ -1,9 +1,11 @@
 package com.sl.springboot.controllers;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -38,7 +40,7 @@ public class IndexController {
 	}
 	
 	@GetMapping("/updateBook")
-	public String init(@RequestParam long id, HttpServletRequest req) {
+	public String init(@RequestParam Integer id, HttpServletRequest req) {
 		req.setAttribute("book", bookService.findOne(id).get());
 		req.setAttribute("mode", "BOOK_EDIT");
 		return "book-home";
@@ -50,10 +52,25 @@ public class IndexController {
 	}
 	
 	@PostMapping("/saveBook")
-	public String init(@ModelAttribute Book book, HttpServletRequest req) {
+	public void save(@ModelAttribute Book book, HttpServletRequest req, HttpServletResponse resp) {
 		bookService.save(book);
 		req.setAttribute("books", bookService.findAll());
 		req.setAttribute("mode", "BOOK_VIEW");
+		//return "book-home";
+		try {
+			resp.sendRedirect("/");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@GetMapping("/newBook")
+	public String newBook(HttpServletRequest req) {
+		req.setAttribute("mode", "BOOK_NEW");
 		return "book-home";
-	}		
+	}
+	
+	
+	
 }

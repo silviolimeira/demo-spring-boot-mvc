@@ -16,7 +16,7 @@ public class Book {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Integer id;
 	
 	@Column(name = "book_name")
 	private String bookName;
@@ -28,11 +28,11 @@ public class Book {
 	@Temporal(TemporalType.DATE)
 	private Date purchaseDate;
 
-	public long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

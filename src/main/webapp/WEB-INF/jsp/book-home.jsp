@@ -22,10 +22,13 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="newBook">New Book</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
@@ -65,7 +68,7 @@
 			</table>
 		</c:when>
 		
-		<c:when test="${mode == 'BOOK_EDIT'}">
+		<c:when test="${mode == 'BOOK_EDIT' || mode == 'BOOK_NEW'}">
 			<form action="saveBook" method="post">
 				<input type="hidden" class="form-control" value="${book.id}" name="id" id="id">
 				<div class="form-group">
