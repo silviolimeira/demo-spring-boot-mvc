@@ -25,6 +25,11 @@
 
      Tutorial css: https://www.w3schools.com/bootstrap/bootstrap_buttons.asp
      
+     Spring Boot: Referencing Static Content Like Javascript and CSS Files
+     	https://www.youtube.com/watch?v=NYXG1gcjhBI
+     
+     Spring Boot + Spring MVC + JPA - Views Formating Using Bootstrap
+        https://www.youtube.com/watch?v=PSpB-4jn_D0&list=PLdJYl6XU45uLIHaPBQEj-cEMynAl0oeiz&index=9
      
      
    
