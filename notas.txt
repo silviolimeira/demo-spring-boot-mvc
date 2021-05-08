@@ -1,5 +1,30 @@
 
-   Wow Spring Boot Web MVC
+   Wow Spring Boot Web MVC  
    =======================
+   @dmin121234
    
+   - Install Spring Tool Suite
+   
+   - Install on MarketPlace
+   
+     > * Eclipse Java and Web Developer Tools 3.21
+     > * Eclipse Web Developer Tools 3.21
+     > Eclipse Xml Editor and Tools 3.21
+     > Maven (Java EE) Integration for Eclipse WTP
+   
+   - Install MySQL
+   
+   - For Jsp Pages: Create folder src/main/webapp/WEB-INF
+   
+   	 In properties src/main/resources/application.properties configure:
+				   	 	
+				   	 	spring.mvc.view.prefix=/WEB-INF/jsp/
+						spring.mvc.view.suffix=.jsp
+   
+   - Download Bootstrap, Jquery Install in: src/main/resources/static
+
+     Tutorial css: https://www.w3schools.com/bootstrap/bootstrap_buttons.asp
+     
+     
+     
    
