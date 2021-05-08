@@ -71,6 +71,13 @@ public class IndexController {
 		return "book-home";
 	}
 	
+	@GetMapping("/deleteBook")
+	public String deleteBook(@RequestParam Integer id, HttpServletRequest req) {
+		bookService.delete(id);
+		req.setAttribute("books", bookService.findAll());
+		req.setAttribute("mode", "BOOK_VIEW");
+		return "book-home";
+	}
 	
 	
 }
