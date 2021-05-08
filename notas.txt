@@ -42,4 +42,6 @@
   		
 	INSERT INTO book (id, book_name, author, purchase_date)
 		VALUES (1, "Java", "Cafe", "2021-05-08");
+   	INSERT INTO book (id, book_name, author, purchase_date)
+		VALUES (2, "C", "Gally", "2021-05-08");
    

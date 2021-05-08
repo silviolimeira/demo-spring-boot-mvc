@@ -16,7 +16,7 @@ public class BookService {
 	@Autowired
 	private Repository repository;
 	
-	private Collection<Book> findAll() {
+	public Collection<Book> findAll() {
 		
 		List<Book> books = new ArrayList<Book>();
 
@@ -26,4 +26,9 @@ public class BookService {
 		
 		return books;
 	}
+	
+	public void delete(long id) {
+		repository.deleteById(id);
+	}
+	
 }
