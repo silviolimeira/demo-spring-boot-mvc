@@ -1,5 +1,6 @@
 package com.sl.springboot.controllers.rest;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
 
@@ -13,7 +14,7 @@ import com.sl.springboot.models.Book;
 import com.sl.springboot.services.BookService;
 
 @RestController
-public class MainController {
+public class BookController {
 
 	@Autowired
 	private BookService bookService;
