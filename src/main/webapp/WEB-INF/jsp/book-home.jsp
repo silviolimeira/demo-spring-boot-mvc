@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Hello Student</title>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 </head>
@@ -43,7 +44,9 @@
 
 	<div class="container">
 	<c:choose>
+	
 		<c:when test="${mode == 'BOOK_VIEW'}">
+			<i class="bi-alarm"></i>
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -62,8 +65,8 @@
 							<td>${book.bookName}</td>
 							<td>${book.author}</td>
 							<td>${book.purchaseDate}</td>
-							<td><a href="updateBook?id=${book.id}"><span class="glyphicon glyphicon-pencil">E</span></a></td>
-							<td><a href="deleteBook?id=${book.id}"><span class="glyphicon glyphicon-trash">E</span></a></td>
+							<td><a href="updateBook?id=${book.id}"><i class="bi bi-pencil"></i></a></td>
+							<td><a href="deleteBook?id=${book.id}"><i class="bi bi-trash"></i></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
