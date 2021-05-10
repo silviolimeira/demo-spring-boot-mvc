@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sl.springboot.models.Book;
@@ -48,7 +47,7 @@ public class IndexController {
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyy-mm-dd"), false));
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), false));
 	}
 	
 	@PostMapping("/saveBook")
@@ -78,6 +77,5 @@ public class IndexController {
 		req.setAttribute("mode", "BOOK_VIEW");
 		return "book-home";
 	}
-	
 	
 }

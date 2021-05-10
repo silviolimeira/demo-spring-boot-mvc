@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -24,8 +26,9 @@ public class Book {
 	@Column(name = "author")
 	private String author;
 	
-	@Column(name = "purchase_date")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
+	@Column(name = "purchase_date", nullable = false, length = 10)
 	private Date purchaseDate;
 
 	public Integer getId() {
@@ -57,6 +60,7 @@ public class Book {
 	}
 
 	public void setPurchaseDate(Date purchaseDate) {
+		System.out.println(purchaseDate.toString());
 		this.purchaseDate = purchaseDate;
 	}
 	

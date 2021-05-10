@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,7 +73,7 @@
 							<td>${book.id}</td>
 							<td>${book.bookName}</td>
 							<td>${book.author}</td>
-							<td>${book.purchaseDate}</td>
+							<td><fmt:formatDate pattern="dd/MM/yyyy" value="${book.purchaseDate}" /></td>
 							<td><a href="updateBook?id=${book.id}"><i class="bi bi-pencil"></i></a></td>
 							<td><a href="deleteBook?id=${book.id}"><i class="bi bi-trash"></i></a></td>
 							
@@ -95,7 +96,7 @@
 				</div>
 				<div class="form-group">
 					<label for="purchaseDate">Purchase Date</label>
-					<input type="date" class="form-control" value="${book.purchaseDate}" name="purchaseDate" id="purchaseDate">
+					<input type="date" class="form-control" value="<fmt:formatDate value="${book.purchaseDate}" pattern="yyyy-MM-dd" />" name="purchaseDate" id="purchaseDate">
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>

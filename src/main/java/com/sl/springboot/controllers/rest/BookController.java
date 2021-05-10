@@ -1,6 +1,5 @@
 package com.sl.springboot.controllers.rest;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
 
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sl.springboot.dao.Repository;
 import com.sl.springboot.models.Book;
 import com.sl.springboot.services.BookService;
 
