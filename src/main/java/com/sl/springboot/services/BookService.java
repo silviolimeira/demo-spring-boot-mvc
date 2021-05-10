@@ -38,7 +38,9 @@ public class BookService {
 	
 	public void save(Book book) {
 		
-		repository.save(book);
+		Book bookSaved = repository.save(book);
+		System.out.println("bookSaved Id: " + bookSaved.getId());
+		
 	}
 	
 }
