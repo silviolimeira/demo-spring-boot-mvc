@@ -21,7 +21,7 @@ import com.sl.springboot.models.Book;
 import com.sl.springboot.services.BookService;
 
 @Controller
-public class IndexController {
+public class BookController {
 
 	@Autowired
 	private BookService bookService;

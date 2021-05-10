@@ -12,7 +12,7 @@ import com.sl.springboot.models.Book;
 import com.sl.springboot.services.BookService;
 
 @RestController
-public class BookController {
+public class BookRESTController {
 
 	@Autowired
 	private BookService bookService;
